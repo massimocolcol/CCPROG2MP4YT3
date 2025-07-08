@@ -7,13 +7,13 @@
 #define MAX_IDOLS 8
 #define SELECTED_IDOLS 3
 
-typedef struct GameState
+typedef struct 
 {
 	int selectedIdols[SELECTED_IDOLS];
 	int DoneDungeons[SELECTED_IDOLS]; //if 0 not yet done, 1 if done
 	int gold;
 	int hp;
-}
+} GameState;
 
 const char *Idols[MAX_IDOLS] = {"Chika", "Riko", "You", "Hanamaru", "Ruby", "Dia", "Kanan", "Mari"};
 
@@ -82,7 +82,7 @@ int Duplicate(int selected[], int count, int val)
 	
 	for(i = 0; i < count; i++)
 	{
-		if(selected[i] == value)
+		if(selected[i] == val)
 			found = 1;	
 	}
 	
@@ -121,3 +121,5 @@ void setNewGame(GameState *state)
 		
 		
 }
+
+
